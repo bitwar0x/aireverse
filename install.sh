@@ -119,7 +119,7 @@ install_soga() {
     fi
 
     if  [ $# == 0 ] ;then
-#        last_version=$(curl -Ls "https://api.github.com/repos/bitwar0x/soga/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+#        last_version=$(curl -Ls "https://api.github.com/repos/bitwar0x/aireverse/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 #        if [[ ! -n "$last_version" ]]; then
 #            echo -e "${red}检测 soga 版本失败，可能是超出 Github API 限制，请稍后再试，或手动指定 soga 版本安装${plain}"
 #            exit 1
@@ -132,7 +132,7 @@ install_soga() {
         fi
     else
         last_version=$1
-        url="https://github.com/bitwar0x/soga/releases/download/${last_version}/soga-linux-${arch}.tar.gz"
+        url="https://github.com/bitwar0x/aireverse/releases/download/${last_version}/soga-linux-${arch}.tar.gz"
         echo -e "开始安装 soga v$1"
         wget -N --no-check-certificate -O /usr/local/soga.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
