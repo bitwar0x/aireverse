@@ -45,7 +45,6 @@
 
 ```bash
 # npm install
-
 bash <(curl -Ls https://raw.githubusercontent.com/bitwar0x/aireverse/main/install.sh)
 ```
 
